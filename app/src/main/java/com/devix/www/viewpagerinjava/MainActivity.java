@@ -14,18 +14,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int placeholderId = R.id.uno;
+
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear);
 
         ViewPager viewPager = new ViewPager(this);
         viewPager.setBackgroundColor(Color.GREEN);
-//        viewPager.setId(R.id.linear);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         params.height = 150;
         params.width = 150;
+        viewPager.setId(R.id.viewPagerNew);
         viewPager.setLayoutParams(params);
 //        addContentView(viewPager, params);
         linearLayout.addView(viewPager);
-//TODO: Referencia http://stackoverflow.com/questions/3204852/android-add-a-textview-to-linear-layout-programmatically
+//TODO: Referencia http://stackoverflow.com/questions/3204852/android-add-a-textview-to-linear-layout-programmatically ---Add ViewPager with Java
+        //Todo: http://stackoverflow.com/questions/8460680/how-can-i-assign-an-id-to-a-view-programmatically ---Add ID
     }
 
 
